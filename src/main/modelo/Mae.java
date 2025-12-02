@@ -24,7 +24,7 @@ public class Mae {
         return endereco;
     }
 
-    public String getDataAniversario() {
+    public LocalDate getDataAniversario() {
         return dataAniversario;
     }
 
@@ -44,7 +44,7 @@ public class Mae {
         this.endereco = endereco;
     }
 
-    public void setDataAniversario(String dataAniversario) {
+    public void setDataAniversario(LocalDate dataAniversario) {
         this.dataAniversario = dataAniversario;
     }
 }

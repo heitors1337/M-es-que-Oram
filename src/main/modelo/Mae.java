@@ -5,7 +5,7 @@ public class Mae {
     private String endereco;
     private LocalDate dataAniversario;
 
-    public Mae() {} //Construtor vazio 
+    public Mae() {} //Construtor vazio
 
 
     public int getId() {

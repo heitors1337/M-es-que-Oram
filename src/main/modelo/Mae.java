@@ -1,17 +1,12 @@
 public class Mae {
-    public int id;
-    public String nome;
-    public String telefone;
-    public String endereco;
-    public String dataAniversario;
+    private int id;
+    private String nome;
+    private String telefone;
+    private String endereco;
+    private LocalDate dataAniversario;
 
-    public Mae(int id, String nome, String telefone, String endereco, String dataAniversario){
-        this.id = id;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.endereco = endereco;
-        this.dataAniversario = dataAniversario;
-    }
+    public Mae() {} //Construtor vazio 
+
 
     public int getId() {
         return id;

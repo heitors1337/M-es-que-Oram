@@ -1,4 +1,4 @@
-public class Servico{
+public class Servico {
     private int id;
     private String nome;
     private Mae maeResponsavel;

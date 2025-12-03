@@ -1,46 +1,37 @@
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
-public class Encontro {
+public class Servico {
     private int id;
-    private LocalDate data;
-    private Status status;
-    private List<Servico> servicos;
+    private ServicoTipo tipo;
+    private Mae maeResponsavel;
+    private String descricao;
 
-    public Encontro() {
-        servicos = new ArrayList<>();
+    public Servico() {
     }
 
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
 
-    public LocalDate getData() {
-        return data;
+    public ServicoTipo getTipo() {
+        return tipo;
+    }
+    public void setTipo(ServicoTipo tipo) {
+        this.tipo = tipo;
     }
 
-    public void setData(LocalDate data) {
-        this.data = data;
+    public Mae getMaeResponsavel() {
+        return maeResponsavel;
+    }
+    public void setMaeResponsavel(Mae maeResponsavel) {
+        this.maeResponsavel = maeResponsavel;
     }
 
-    public Status getStatus() {
-        return status;
+    public String getDescricao() {
+        return descricao;
     }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
-    public List<Servico> getServicos() {
-        return servicos;
-    }
-
-    public void setServicos(List<Servico> servicos) {
-        this.servicos = servicos;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }

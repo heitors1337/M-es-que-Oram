@@ -34,3 +34,11 @@ VALUES ('Maria Silva', '99999-9999', 'Rua A, 123', '1980-05-12');
 -- encontro
 INSERT INTO encontro (data, mae_id, status_id)
 VALUES ('2025-01-10', 1, 1);
+
+
+SELECT * FROM mae;
+
+SELECT e.id, e.data, m.nome AS mae, s.nome AS status
+FROM encontro e
+JOIN mae m ON e.mae_id = m.id
+JOIN status s ON e.status_id = s.id;

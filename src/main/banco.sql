@@ -70,9 +70,18 @@ CREATE TABLE encontro_servico (
     id INT PRIMARY KEY AUTO_INCREMENT,
     encontro_id INT NOT NULL,
     servico_tipo_id INT NOT NULL,
-    mae_id INT,                
+    mae_id INT,
     descricao VARCHAR(500),
     FOREIGN KEY (encontro_id) REFERENCES encontro(id) ON DELETE CASCADE,
     FOREIGN KEY (servico_tipo_id) REFERENCES servico_tipo(id),
     FOREIGN KEY (mae_id) REFERENCES mae(id)
 );
+
+SELECT st.nome AS servico,
+       m.nome AS mae_responsavel,
+       es.descricao
+FROM encontro_servico es
+JOIN servico_tipo st ON es.servico_tipo_id = st.id
+LEFT JOIN mae m ON es.mae_id = m.id
+WHERE es.encontro_id = 1
+ORDER BY st.id;

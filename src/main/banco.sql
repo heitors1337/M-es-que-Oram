@@ -42,3 +42,37 @@ SELECT e.id, e.data, m.nome AS mae, s.nome AS status
 FROM encontro e
 JOIN mae m ON e.mae_id = m.id
 JOIN status s ON e.status_id = s.id;
+
+
+
+
+CREATE TABLE servico_tipo (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL UNIQUE
+);
+
+INSERT INTO servico_tipo (nome) VALUES
+('MÚSICA'),
+('RECEPÇÃO DE MÃES'),
+('ACOLHIDA'),
+('TERÇO'),
+('FORMAÇÃO'),
+('MOMENTO ORACIONAL'),
+('PROCLAMAÇÃO DA VITÓRIA'),
+('SORTEIO DAS FLORES'),
+('ENCERRAMENTO'),
+('ARRUMAÇÃO CAPELA'),
+('QUEIMA DOS PEDIDOS'),
+('COMPRA DAS FLORES');
+
+
+CREATE TABLE encontro_servico (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    encontro_id INT NOT NULL,
+    servico_tipo_id INT NOT NULL,
+    mae_id INT,                
+    descricao VARCHAR(500),
+    FOREIGN KEY (encontro_id) REFERENCES encontro(id) ON DELETE CASCADE,
+    FOREIGN KEY (servico_tipo_id) REFERENCES servico_tipo(id),
+    FOREIGN KEY (mae_id) REFERENCES mae(id)
+);

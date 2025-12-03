@@ -27,3 +27,10 @@ CREATE TABLE encontro (
     FOREIGN KEY (mae_id) REFERENCES mae(id),
     FOREIGN KEY (status_id) REFERENCES status(id)
 );
+-- mãe
+INSERT INTO mae (nome, telefone, endereco, data_aniversario)
+VALUES ('Maria Silva', '99999-9999', 'Rua A, 123', '1980-05-12');
+
+-- encontro
+INSERT INTO encontro (data, mae_id, status_id)
+VALUES ('2025-01-10', 1, 1);

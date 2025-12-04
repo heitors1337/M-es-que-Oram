@@ -85,3 +85,6 @@ JOIN servico_tipo st ON es.servico_tipo_id = st.id
 LEFT JOIN mae m ON es.mae_id = m.id
 WHERE es.encontro_id = 1
 ORDER BY st.id;
+
+SELECT * FROM mae
+WHERE MONTH(data_aniversario) = MONTH(CURRENT_DATE());

@@ -8,13 +8,17 @@ public class TelaPrincipal extends JFrame {
 
         JButton btnMae = new JButton("Cadastrar Mãe");
         JButton btnEncontro = new JButton("Cadastrar Encontro");
+        JButton btnRelatorio = new JButton("Gerar Relatório");
 
         btnMae.addActionListener(e -> new TelaMae());
         btnEncontro.addActionListener(e -> new TelaEncontro());
+        btnRelatorio.addActionListener(e -> new TelaRelatorio());
+
 
         JPanel painel = new JPanel();
         painel.add(btnMae);
         painel.add(btnEncontro);
+        painel.add(btnRelatorio);
 
         add(painel);
         setVisible(true);

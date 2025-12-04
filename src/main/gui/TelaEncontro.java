@@ -39,16 +39,15 @@ public class TelaEncontro extends JFrame {
     }
 
     private void carregarCombos() {
-        // carregar mães
+
         MaeDAO mdao = new MaeDAO();
         for (Mae m : mdao.listar()) comboMae.addItem(m);
 
-        // carregar serviços
         ServicoTipoDAO sdao = new ServicoTipoDAO();
         for (ServicoTipo st : sdao.listar()) comboServico.addItem(st);
     }
 
     private void salvarEncontro() {
-        // depois implementamos
+
     }
 }

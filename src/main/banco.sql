@@ -15,7 +15,7 @@ CREATE TABLE status (
 );
 
 INSERT INTO status (nome) VALUES
-('FUTURO'),
+('AGENDADO'),
 ('REALIZADO'),
 ('CANCELADO');
 
